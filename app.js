@@ -7,10 +7,12 @@ const app = express();
 console.log(process.env.ENV);
 if (process.env.ENV === 'Test') {
   console.log('test');
-  mongoose.connect('mongodb://localhost/bookAPI_test');
+  const testUri = "mongodb+srv://PS_Training_Admin:15PPKuFyzY7wOafC@banuchi-training.lm2g3.mongodb.net/bookAPI?retryWrites=true&w=majority";
+  mongoose.connect(testUri);
 } else {
   console.log('not test');
-  mongoose.connect('mongodb://localhost/bookAPITest');
+  const liveUri = "mongodb+srv://PS_Training_Admin:15PPKuFyzY7wOafC@banuchi-training.lm2g3.mongodb.net/bookAPI?retryWrites=true&w=majority";
+  mongoose.connect(liveUri);
 }
 
 const port = process.env.PORT || 3000;

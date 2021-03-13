@@ -21,6 +21,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "mongodb": "^3.6.4",
     "mongoose": "^5.3.13",
     "nodemon": "^1.18.6"
   },
@@ -40,6 +41,7 @@
     ],
     "delay": "2500",
     "env": {
+      "ENV": "Test",
       "NODE_ENV": "development",
       "PORT": 4000
     }
